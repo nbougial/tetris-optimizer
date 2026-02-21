@@ -8,6 +8,9 @@ All execution tasks are in `documentation/tasks/` and are intentionally granular
 ## Status Tracking
 Track progress in `documentation/tasks/STATUS.md`.
 
+## Test Specs
+Task-level test files are in `documentation/tests/`.
+
 ## Suggested Execution Order
 Run tasks by numeric prefix (`01` to `30`).
 
