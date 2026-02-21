@@ -5,6 +5,9 @@ This folder contains implementation planning for the tetromino optimizer project
 ## Task Breakdown
 All execution tasks are in `documentation/tasks/` and are intentionally granular to support incremental delivery, review, and testing.
 
+## Status Tracking
+Track progress in `documentation/tasks/STATUS.md`.
+
 ## Suggested Execution Order
 Run tasks by numeric prefix (`01` to `30`).
 
