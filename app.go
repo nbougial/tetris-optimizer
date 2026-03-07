@@ -20,7 +20,12 @@ func run(args []string) error {
 		return errInvalidArgCount
 	}
 
-	if _, err := parser.ReadInputFile(args[0]); err != nil {
+	content, err := parser.ReadInputFile(args[0])
+	if err != nil {
+		return err
+	}
+
+	if _, err := parser.SplitRawBlocks(content); err != nil {
 		return err
 	}
 
