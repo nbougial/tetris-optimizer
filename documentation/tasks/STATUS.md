@@ -13,7 +13,7 @@ Status legend:
 | done | [01_project_structure_bootstrap](./01_project_structure_bootstrap.md) | codex | 2026-03-07 |
 | done | [02_cli_contract](./02_cli_contract.md) | codex | 2026-03-07 |
 | done | [03_file_reading_layer](./03_file_reading_layer.md) | codex | 2026-03-07 |
-| todo | [04_raw_block_splitter](./04_raw_block_splitter.md) | - | - |
+| done | [04_raw_block_splitter](./04_raw_block_splitter.md) | codex | 2026-03-07 |
 | todo | [05_block_line_count_validator](./05_block_line_count_validator.md) | - | - |
 | todo | [06_block_column_validator](./06_block_column_validator.md) | - | - |
 | todo | [07_character_validator](./07_character_validator.md) | - | - |
