@@ -10,7 +10,7 @@ Status legend:
 
 | Status | Task | Owner | Updated |
 |---|---|---|---|
-| todo | [01_project_structure_bootstrap](./01_project_structure_bootstrap.md) | - | - |
+| done | [01_project_structure_bootstrap](./01_project_structure_bootstrap.md) | codex | 2026-03-07 |
 | todo | [02_cli_contract](./02_cli_contract.md) | - | - |
 | todo | [03_file_reading_layer](./03_file_reading_layer.md) | - | - |
 | todo | [04_raw_block_splitter](./04_raw_block_splitter.md) | - | - |
