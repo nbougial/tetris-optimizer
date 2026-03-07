@@ -11,7 +11,7 @@ Status legend:
 | Status | Task | Owner | Updated |
 |---|---|---|---|
 | done | [01_project_structure_bootstrap](./01_project_structure_bootstrap.md) | codex | 2026-03-07 |
-| todo | [02_cli_contract](./02_cli_contract.md) | - | - |
+| done | [02_cli_contract](./02_cli_contract.md) | codex | 2026-03-07 |
 | todo | [03_file_reading_layer](./03_file_reading_layer.md) | - | - |
 | todo | [04_raw_block_splitter](./04_raw_block_splitter.md) | - | - |
 | todo | [05_block_line_count_validator](./05_block_line_count_validator.md) | - | - |
