@@ -15,7 +15,7 @@ Status legend:
 | done | [03_file_reading_layer](./03_file_reading_layer.md) | codex | 2026-03-07 |
 | done | [04_raw_block_splitter](./04_raw_block_splitter.md) | codex | 2026-03-07 |
 | done | [05_block_line_count_validator](./05_block_line_count_validator.md) | codex | 2026-03-10 |
-| todo | [06_block_column_validator](./06_block_column_validator.md) | - | - |
+| done | [06_block_column_validator](./06_block_column_validator.md) | codex | 2026-03-10 |
 | todo | [07_character_validator](./07_character_validator.md) | - | - |
 | todo | [08_hash_count_validator](./08_hash_count_validator.md) | - | - |
 | todo | [09_connectivity_validator](./09_connectivity_validator.md) | - | - |
