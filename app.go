@@ -25,7 +25,12 @@ func run(args []string) error {
 		return err
 	}
 
-	if _, err := parser.SplitRawBlocks(content); err != nil {
+	blocks, err := parser.SplitRawBlocks(content)
+	if err != nil {
+		return err
+	}
+
+	if err := parser.ValidateBlockLineCounts(blocks); err != nil {
 		return err
 	}
 
