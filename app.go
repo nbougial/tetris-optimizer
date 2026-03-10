@@ -34,5 +34,9 @@ func run(args []string) error {
 		return err
 	}
 
+	if err := parser.ValidateBlockColumnCounts(blocks); err != nil {
+		return err
+	}
+
 	return nil
 }
