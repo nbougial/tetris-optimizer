@@ -46,5 +46,9 @@ func run(args []string) error {
 		return err
 	}
 
+	if err := parser.ValidateBlockConnectivity(blocks); err != nil {
+		return err
+	}
+
 	return nil
 }
