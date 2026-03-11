@@ -42,5 +42,9 @@ func run(args []string) error {
 		return err
 	}
 
+	if err := parser.ValidateBlockHashCounts(blocks); err != nil {
+		return err
+	}
+
 	return nil
 }
