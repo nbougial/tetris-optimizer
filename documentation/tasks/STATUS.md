@@ -22,7 +22,7 @@ Status legend:
 | done | [10_piece_model_definition](./10_piece_model_definition.md) | codex | 2026-03-12 |
 | done | [11_piece_normalization](./11_piece_normalization.md) | codex | 2026-03-12 |
 | done | [12_piece_order_and_labels](./12_piece_order_and_labels.md) | codex | 2026-03-12 |
-| todo | [13_board_model](./13_board_model.md) | - | - |
+| done | [13_board_model](./13_board_model.md) | codex | 2026-03-12 |
 | todo | [14_board_helpers](./14_board_helpers.md) | - | - |
 | todo | [15_min_initial_size_calculator](./15_min_initial_size_calculator.md) | - | - |
 | todo | [16_placement_validator](./16_placement_validator.md) | - | - |
