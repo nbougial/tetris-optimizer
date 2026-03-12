@@ -50,7 +50,9 @@ func run(args []string) error {
 		return err
 	}
 
-	_ = parser.BuildPieces(blocks)
+	if _, err := parser.BuildPieces(blocks); err != nil {
+		return err
+	}
 
 	return nil
 }

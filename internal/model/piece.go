@@ -1,6 +1,9 @@
 package model
 
-import "sort"
+import (
+	"errors"
+	"sort"
+)
 
 type Coordinate struct {
 	Row int
@@ -10,6 +13,17 @@ type Coordinate struct {
 type Piece struct {
 	Cells      []Coordinate
 	LabelIndex int
+	Label      rune
+}
+
+var errLabelOverflow = errors.New("label overflow")
+
+func LabelForIndex(index int) (rune, error) {
+	if index < 0 || index >= 26 {
+		return 0, errLabelOverflow
+	}
+
+	return rune('A' + index), nil
 }
 
 func NormalizePiece(piece Piece) Piece {
@@ -32,6 +46,7 @@ func NormalizePiece(piece Piece) Piece {
 	normalized := Piece{
 		Cells:      make([]Coordinate, len(piece.Cells)),
 		LabelIndex: piece.LabelIndex,
+		Label:      piece.Label,
 	}
 
 	for index, cell := range piece.Cells {
