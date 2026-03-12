@@ -50,5 +50,7 @@ func run(args []string) error {
 		return err
 	}
 
+	_ = parser.BuildPieces(blocks)
+
 	return nil
 }
