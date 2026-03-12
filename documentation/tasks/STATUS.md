@@ -19,7 +19,7 @@ Status legend:
 | done | [07_character_validator](./07_character_validator.md) | codex | 2026-03-10 |
 | done | [08_hash_count_validator](./08_hash_count_validator.md) | codex | 2026-03-11 |
 | done | [09_connectivity_validator](./09_connectivity_validator.md) | codex | 2026-03-11 |
-| todo | [10_piece_model_definition](./10_piece_model_definition.md) | - | - |
+| done | [10_piece_model_definition](./10_piece_model_definition.md) | codex | 2026-03-12 |
 | todo | [11_piece_normalization](./11_piece_normalization.md) | - | - |
 | todo | [12_piece_order_and_labels](./12_piece_order_and_labels.md) | - | - |
 | todo | [13_board_model](./13_board_model.md) | - | - |
