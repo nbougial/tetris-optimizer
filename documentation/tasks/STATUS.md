@@ -21,7 +21,7 @@ Status legend:
 | done | [09_connectivity_validator](./09_connectivity_validator.md) | codex | 2026-03-11 |
 | done | [10_piece_model_definition](./10_piece_model_definition.md) | codex | 2026-03-12 |
 | done | [11_piece_normalization](./11_piece_normalization.md) | codex | 2026-03-12 |
-| todo | [12_piece_order_and_labels](./12_piece_order_and_labels.md) | - | - |
+| done | [12_piece_order_and_labels](./12_piece_order_and_labels.md) | codex | 2026-03-12 |
 | todo | [13_board_model](./13_board_model.md) | - | - |
 | todo | [14_board_helpers](./14_board_helpers.md) | - | - |
 | todo | [15_min_initial_size_calculator](./15_min_initial_size_calculator.md) | - | - |
