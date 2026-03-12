@@ -22,7 +22,7 @@ func BuildPieces(blocks [][]string) []model.Piece {
 			}
 		}
 
-		pieces = append(pieces, piece)
+		pieces = append(pieces, model.NormalizePiece(piece))
 	}
 
 	return pieces
