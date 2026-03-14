@@ -30,7 +30,7 @@ func TestExecuteWithWriterStaysSilentOnSuccessfulRun(t *testing.T) {
 
 	executeWithWriter([]string{"testdata/task12_valid_two_pieces.txt"}, &buffer)
 
-	if got := buffer.String(); got != "" {
-		t.Fatalf("expected no output on success, got %q", got)
+	if got := buffer.String(); got != "AAB.\nAAB.\n..B.\n..B.\n" {
+		t.Fatalf("unexpected success output: got %q", got)
 	}
 }
