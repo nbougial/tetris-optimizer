@@ -5,7 +5,7 @@ import "testing"
 func TestInitialBoardSize(t *testing.T) {
 	testCases := []struct {
 		pieceCount int
-		want      int
+		want       int
 	}{
 		{pieceCount: 0, want: 0},
 		{pieceCount: 1, want: 2},

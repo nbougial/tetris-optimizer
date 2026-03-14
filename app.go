@@ -12,6 +12,7 @@ import (
 )
 
 var errInvalidArgCount = errors.New("invalid argument count")
+
 const errorOutput = "ERROR"
 
 func execute(args []string) {
