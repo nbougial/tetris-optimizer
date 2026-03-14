@@ -37,7 +37,7 @@ Status legend:
 | done | [25_cli_integration_tests](./25_cli_integration_tests.md) | codex | 2026-03-14 |
 | done | [26_test_fixtures_catalog](./26_test_fixtures_catalog.md) | codex | 2026-03-14 |
 | done | [27_determinism_and_regression_checks](./27_determinism_and_regression_checks.md) | codex | 2026-03-14 |
-| todo | [28_code_quality_gate](./28_code_quality_gate.md) | - | - |
+| done | [28_code_quality_gate](./28_code_quality_gate.md) | codex | 2026-03-14 |
 | todo | [29_readme_alignment](./29_readme_alignment.md) | - | - |
 | todo | [30_release_checklist](./30_release_checklist.md) | - | - |
 
