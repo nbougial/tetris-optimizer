@@ -2,6 +2,7 @@ package solver
 
 import "math"
 
+// InitialBoardSize returns the mathematically smallest square side that could hold all pieces by area.
 func InitialBoardSize(pieceCount int) int {
 	if pieceCount <= 0 {
 		return 0

@@ -15,10 +15,12 @@ var errInvalidArgCount = errors.New("invalid argument count")
 
 const errorOutput = "ERROR"
 
+// execute keeps the default CLI behavior tied to stdout.
 func execute(args []string) {
 	executeWithWriter(args, os.Stdout)
 }
 
+// executeWithWriter makes the CLI flow testable while preserving the real output path.
 func executeWithWriter(args []string, writer io.Writer) {
 	rendered, err := run(args)
 	if err != nil {
@@ -29,15 +31,18 @@ func executeWithWriter(args []string, writer io.Writer) {
 	fmt.Fprint(writer, rendered)
 }
 
+// writeError centralizes the only user-facing failure message.
 func writeError(writer io.Writer) {
 	fmt.Fprintln(writer, errorOutput)
 }
 
+// run performs the full happy-path workflow: parse, validate, solve, and render.
 func run(args []string) (string, error) {
 	if len(args) != 1 {
 		return "", errInvalidArgCount
 	}
 
+	// The parser stages stay explicit so each validation step remains easy to reason about.
 	content, err := parser.ReadInputFile(args[0])
 	if err != nil {
 		return "", err
@@ -73,6 +78,7 @@ func run(args []string) (string, error) {
 		return "", err
 	}
 
+	// The solver guarantees the first returned board uses the minimal possible square size.
 	board, solved := solver.SolveMinimal(pieces)
 	if !solved {
 		return "", errors.New("no solution found")

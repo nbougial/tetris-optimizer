@@ -4,11 +4,13 @@ import "errors"
 
 var errDisconnectedBlock = errors.New("disconnected block")
 
+// cell is an internal helper used by the connectivity search.
 type cell struct {
 	row int
 	col int
 }
 
+// ValidateBlockConnectivity ensures each tetromino is connected through shared edges.
 func ValidateBlockConnectivity(blocks [][]string) error {
 	for _, block := range blocks {
 		if !isBlockConnected(block) {
@@ -19,6 +21,7 @@ func ValidateBlockConnectivity(blocks [][]string) error {
 	return nil
 }
 
+// isBlockConnected runs a breadth-first search over the occupied cells of one block.
 func isBlockConnected(block []string) bool {
 	start, found := findFirstHash(block)
 	if !found {
@@ -32,6 +35,7 @@ func isBlockConnected(block []string) bool {
 		current := queue[0]
 		queue = queue[1:]
 
+		// Only orthogonal neighbors count as connected in a valid tetromino.
 		for _, next := range neighbors(current) {
 			if next.row < 0 || next.row >= len(block) {
 				continue
@@ -51,6 +55,7 @@ func isBlockConnected(block []string) bool {
 	return len(visited) == 4
 }
 
+// findFirstHash chooses the search starting point.
 func findFirstHash(block []string) (cell, bool) {
 	for row, line := range block {
 		for col, current := range line {
@@ -63,6 +68,7 @@ func findFirstHash(block []string) (cell, bool) {
 	return cell{}, false
 }
 
+// neighbors returns the four edge-adjacent candidates around one cell.
 func neighbors(current cell) []cell {
 	return []cell{
 		{row: current.row - 1, col: current.col},

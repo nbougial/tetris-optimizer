@@ -5,11 +5,13 @@ import (
 	"sort"
 )
 
+// Coordinate represents one occupied cell of a tetromino relative to an origin.
 type Coordinate struct {
 	Row int
 	Col int
 }
 
+// Piece stores a normalized tetromino shape together with its stable label metadata.
 type Piece struct {
 	Cells      []Coordinate
 	LabelIndex int
@@ -18,6 +20,7 @@ type Piece struct {
 
 var errLabelOverflow = errors.New("label overflow")
 
+// LabelForIndex converts input order into the required A-Z piece labels.
 func LabelForIndex(index int) (rune, error) {
 	if index < 0 || index >= 26 {
 		return 0, errLabelOverflow
@@ -26,6 +29,7 @@ func LabelForIndex(index int) (rune, error) {
 	return rune('A' + index), nil
 }
 
+// NormalizePiece shifts a piece to the top-left origin and sorts cells for stable comparisons.
 func NormalizePiece(piece Piece) Piece {
 	if len(piece.Cells) == 0 {
 		return piece
@@ -49,6 +53,7 @@ func NormalizePiece(piece Piece) Piece {
 		Label:      piece.Label,
 	}
 
+	// Shift every occupied cell so the piece origin becomes the smallest row/col seen.
 	for index, cell := range piece.Cells {
 		normalized.Cells[index] = Coordinate{
 			Row: cell.Row - minRow,
@@ -56,6 +61,7 @@ func NormalizePiece(piece Piece) Piece {
 		}
 	}
 
+	// Stable ordering keeps solver behavior and test expectations deterministic.
 	sort.Slice(normalized.Cells, func(i, j int) bool {
 		if normalized.Cells[i].Row != normalized.Cells[j].Row {
 			return normalized.Cells[i].Row < normalized.Cells[j].Row

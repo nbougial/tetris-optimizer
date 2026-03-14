@@ -2,10 +2,12 @@ package parser
 
 import "tetris-optimizer/internal/model"
 
+// BuildPieces converts validated text blocks into normalized model pieces with stable labels.
 func BuildPieces(blocks [][]string) ([]model.Piece, error) {
 	pieces := make([]model.Piece, 0, len(blocks))
 
 	for index, block := range blocks {
+		// Labels are assigned in input order so the solver and renderer stay deterministic.
 		label, err := model.LabelForIndex(index)
 		if err != nil {
 			return nil, err
@@ -28,6 +30,7 @@ func BuildPieces(blocks [][]string) ([]model.Piece, error) {
 			}
 		}
 
+		// The solver only works with normalized coordinates, not the original 4x4 offsets.
 		pieces = append(pieces, model.NormalizePiece(piece))
 	}
 
