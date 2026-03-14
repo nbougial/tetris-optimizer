@@ -29,7 +29,7 @@ Status legend:
 | done | [17_place_and_remove_ops](./17_place_and_remove_ops.md) | codex | 2026-03-14 |
 | done | [18_backtracking_solver_core](./18_backtracking_solver_core.md) | codex | 2026-03-14 |
 | done | [19_incremental_size_retry](./19_incremental_size_retry.md) | codex | 2026-03-14 |
-| todo | [20_output_renderer](./20_output_renderer.md) | - | - |
+| done | [20_output_renderer](./20_output_renderer.md) | codex | 2026-03-14 |
 | todo | [21_unified_error_output](./21_unified_error_output.md) | - | - |
 | todo | [22_parser_unit_tests](./22_parser_unit_tests.md) | - | - |
 | todo | [23_shape_validation_unit_tests](./23_shape_validation_unit_tests.md) | - | - |
