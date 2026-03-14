@@ -3,16 +3,27 @@ package main
 import (
 	"errors"
 	"fmt"
+	"io"
+	"os"
 
 	"tetris-optimizer/internal/parser"
 )
 
 var errInvalidArgCount = errors.New("invalid argument count")
+const errorOutput = "ERROR"
 
 func execute(args []string) {
+	executeWithWriter(args, os.Stdout)
+}
+
+func executeWithWriter(args []string, writer io.Writer) {
 	if err := run(args); err != nil {
-		fmt.Println("ERROR")
+		writeError(writer)
 	}
+}
+
+func writeError(writer io.Writer) {
+	fmt.Fprintln(writer, errorOutput)
 }
 
 func run(args []string) error {
