@@ -38,7 +38,7 @@ Status legend:
 | done | [26_test_fixtures_catalog](./26_test_fixtures_catalog.md) | codex | 2026-03-14 |
 | done | [27_determinism_and_regression_checks](./27_determinism_and_regression_checks.md) | codex | 2026-03-14 |
 | done | [28_code_quality_gate](./28_code_quality_gate.md) | codex | 2026-03-14 |
-| todo | [29_readme_alignment](./29_readme_alignment.md) | - | - |
+| done | [29_readme_alignment](./29_readme_alignment.md) | codex | 2026-03-14 |
 | todo | [30_release_checklist](./30_release_checklist.md) | - | - |
 
 ## Update Policy
