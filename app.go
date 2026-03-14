@@ -6,7 +6,9 @@ import (
 	"io"
 	"os"
 
+	"tetris-optimizer/internal/output"
 	"tetris-optimizer/internal/parser"
+	"tetris-optimizer/internal/solver"
 )
 
 var errInvalidArgCount = errors.New("invalid argument count")
@@ -17,53 +19,63 @@ func execute(args []string) {
 }
 
 func executeWithWriter(args []string, writer io.Writer) {
-	if err := run(args); err != nil {
+	rendered, err := run(args)
+	if err != nil {
 		writeError(writer)
+		return
 	}
+
+	fmt.Fprint(writer, rendered)
 }
 
 func writeError(writer io.Writer) {
 	fmt.Fprintln(writer, errorOutput)
 }
 
-func run(args []string) error {
+func run(args []string) (string, error) {
 	if len(args) != 1 {
-		return errInvalidArgCount
+		return "", errInvalidArgCount
 	}
 
 	content, err := parser.ReadInputFile(args[0])
 	if err != nil {
-		return err
+		return "", err
 	}
 
 	blocks, err := parser.SplitRawBlocks(content)
 	if err != nil {
-		return err
+		return "", err
 	}
 
 	if err := parser.ValidateBlockLineCounts(blocks); err != nil {
-		return err
+		return "", err
 	}
 
 	if err := parser.ValidateBlockColumnCounts(blocks); err != nil {
-		return err
+		return "", err
 	}
 
 	if err := parser.ValidateBlockCharacters(blocks); err != nil {
-		return err
+		return "", err
 	}
 
 	if err := parser.ValidateBlockHashCounts(blocks); err != nil {
-		return err
+		return "", err
 	}
 
 	if err := parser.ValidateBlockConnectivity(blocks); err != nil {
-		return err
+		return "", err
 	}
 
-	if _, err := parser.BuildPieces(blocks); err != nil {
-		return err
+	pieces, err := parser.BuildPieces(blocks)
+	if err != nil {
+		return "", err
 	}
 
-	return nil
+	board, solved := solver.SolveMinimal(pieces)
+	if !solved {
+		return "", errors.New("no solution found")
+	}
+
+	return output.RenderBoard(board), nil
 }
