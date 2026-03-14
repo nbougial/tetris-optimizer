@@ -32,7 +32,7 @@ Status legend:
 | done | [20_output_renderer](./20_output_renderer.md) | codex | 2026-03-14 |
 | done | [21_unified_error_output](./21_unified_error_output.md) | codex | 2026-03-14 |
 | done | [22_parser_unit_tests](./22_parser_unit_tests.md) | codex | 2026-03-14 |
-| todo | [23_shape_validation_unit_tests](./23_shape_validation_unit_tests.md) | - | - |
+| done | [23_shape_validation_unit_tests](./23_shape_validation_unit_tests.md) | codex | 2026-03-14 |
 | todo | [24_solver_unit_tests](./24_solver_unit_tests.md) | - | - |
 | todo | [25_cli_integration_tests](./25_cli_integration_tests.md) | - | - |
 | todo | [26_test_fixtures_catalog](./26_test_fixtures_catalog.md) | - | - |
