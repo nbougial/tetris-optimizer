@@ -35,7 +35,7 @@ Status legend:
 | done | [23_shape_validation_unit_tests](./23_shape_validation_unit_tests.md) | codex | 2026-03-14 |
 | done | [24_solver_unit_tests](./24_solver_unit_tests.md) | codex | 2026-03-14 |
 | done | [25_cli_integration_tests](./25_cli_integration_tests.md) | codex | 2026-03-14 |
-| todo | [26_test_fixtures_catalog](./26_test_fixtures_catalog.md) | - | - |
+| done | [26_test_fixtures_catalog](./26_test_fixtures_catalog.md) | codex | 2026-03-14 |
 | todo | [27_determinism_and_regression_checks](./27_determinism_and_regression_checks.md) | - | - |
 | todo | [28_code_quality_gate](./28_code_quality_gate.md) | - | - |
 | todo | [29_readme_alignment](./29_readme_alignment.md) | - | - |
