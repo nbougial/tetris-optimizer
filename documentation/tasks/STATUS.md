@@ -39,7 +39,7 @@ Status legend:
 | done | [27_determinism_and_regression_checks](./27_determinism_and_regression_checks.md) | codex | 2026-03-14 |
 | done | [28_code_quality_gate](./28_code_quality_gate.md) | codex | 2026-03-14 |
 | done | [29_readme_alignment](./29_readme_alignment.md) | codex | 2026-03-14 |
-| todo | [30_release_checklist](./30_release_checklist.md) | - | - |
+| done | [30_release_checklist](./30_release_checklist.md) | codex | 2026-03-14 |
 
 ## Update Policy
 - Set one task to `in-progress` when starting.
