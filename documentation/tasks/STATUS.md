@@ -26,7 +26,7 @@ Status legend:
 | done | [14_board_helpers](./14_board_helpers.md) | codex | 2026-03-12 |
 | done | [15_min_initial_size_calculator](./15_min_initial_size_calculator.md) | codex | 2026-03-12 |
 | done | [16_placement_validator](./16_placement_validator.md) | codex | 2026-03-12 |
-| todo | [17_place_and_remove_ops](./17_place_and_remove_ops.md) | - | - |
+| done | [17_place_and_remove_ops](./17_place_and_remove_ops.md) | codex | 2026-03-14 |
 | todo | [18_backtracking_solver_core](./18_backtracking_solver_core.md) | - | - |
 | todo | [19_incremental_size_retry](./19_incremental_size_retry.md) | - | - |
 | todo | [20_output_renderer](./20_output_renderer.md) | - | - |
